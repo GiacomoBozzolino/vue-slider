@@ -32,7 +32,7 @@ createApp({
             ],
           
             activeImage: 0, 
-            autoscroll: false
+            autoScroll: false
         }
         
         
@@ -40,10 +40,7 @@ createApp({
 
     created(){
         // recupero la funzione per proseguire tra le immagini
-        this.autoscroll = setInterval(()=>{
-            this.nextImage()
-
-        },3000);
+       this.startPlay()
 
     },
     
@@ -69,6 +66,18 @@ createApp({
 
         bigImage(index){
             this.activeImage = index
+        },
+
+        stopPlay(){
+            clearInterval(this.autoScroll);
+        },
+
+        startPlay(){
+            this.autoScroll = setInterval(()=>{
+                this.nextImage()
+    
+            },3000);
+            
         }
     
     }
