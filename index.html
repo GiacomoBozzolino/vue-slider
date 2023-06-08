@@ -17,8 +17,10 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                  
-                    <img v-for="(image, index) in slides" :src= "image.image" alt="" />
+
+                    <!-- <img v-for="(image, index) in slides" :src= "image.image" alt="" /> -->
+                    <img  :src="slides[activeImage].image" alt="" />
+                    
                     <div class="text">
                         <h3></h3>
                         <p>
@@ -32,6 +34,8 @@
                     <div class="next"></div>
                     <div class="thumb active">
                         <img v-for="(image, index) in slides" :src= "image.image" alt="" />
+                        
+                        
                        
                     </div>
                     <div class="thumb">

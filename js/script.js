@@ -31,9 +31,11 @@ createApp({
                 },
             ],
           
-            activeImage: 0,
+            activeImage: 0, 
             
         }
+       
+        
+
     },
 }).mount('#app');
-
