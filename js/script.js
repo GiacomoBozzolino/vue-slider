@@ -32,10 +32,31 @@ createApp({
             ],
           
             activeImage: 0, 
-            
         }
-       
         
-
+        
     },
+    
+    methods:{
+        // funzione per avanzare nell'array
+        nextImage (){
+            this.activeImage++
+            // metto un controllo
+           if (this.activeImage > this.slides.length -1 ){
+                this.activeImage = 0
+                console.log(this.slides.length)
+                
+            }
+
+        },
+
+        prevImage (){
+            this.activeImage--
+            // metto un controllo
+             if (this.activeImage < 0){
+                this.activeImage = this.slides.length -1
+            }
+        },
+    
+    }
 }).mount('#app');
