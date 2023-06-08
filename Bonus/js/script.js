@@ -32,21 +32,31 @@ createApp({
             ],
           
             activeImage: 0, 
+            autoscroll: false
         }
         
         
+    },
+
+    created(){
+        // recupero la funzione per proseguire tra le immagini
+        this.autoscroll = setInterval(()=>{
+            this.nextImage()
+
+        },3000);
+
     },
     
     methods:{
         // funzione per avanzare nell'array
         nextImage (){
-            this.activeImage++
+            this.activeImage++;
             // metto un controllo
            if (this.activeImage > this.slides.length -1 ){
-                this.activeImage = 0
-                console.log(this.slides.length)
+                this.activeImage = 0;
+                console.log(this.slides.length);
                 
-            }
+            };
         },
 
         prevImage (){
@@ -54,7 +64,7 @@ createApp({
             // metto un controllo
              if (this.activeImage < 0){
                 this.activeImage = this.slides.length -1
-            }
+            };
         },
 
         bigImage(index){
