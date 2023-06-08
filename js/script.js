@@ -39,6 +39,8 @@ createApp({
     
     methods:{
         // funzione per avanzare nell'array
+
+        
         nextImage (){
             this.activeImage++
             // metto un controllo
@@ -47,7 +49,6 @@ createApp({
                 console.log(this.slides.length)
                 
             }
-
         },
 
         prevImage (){
