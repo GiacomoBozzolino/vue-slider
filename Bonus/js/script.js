@@ -39,8 +39,6 @@ createApp({
     
     methods:{
         // funzione per avanzare nell'array
-
-        
         nextImage (){
             this.activeImage++
             // metto un controllo
@@ -58,6 +56,10 @@ createApp({
                 this.activeImage = this.slides.length -1
             }
         },
+
+        bigImage(index){
+            this.activeImage = index
+        }
     
     }
 }).mount('#app');
