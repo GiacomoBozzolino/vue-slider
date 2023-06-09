@@ -29,8 +29,8 @@
 
                     </div>
                     <div class="next" @click="nextImage"></div>
-                    <div class="thumb active">
-                        <img v-for="(image, index) in slides" :src= "image.image" alt="" :class="activeImage === index ? 'thumb active' : '' " @click="bigImage(index)"  />  
+                    <div class="thumb" v-for="(item, index) in slides" :class="activeImage === index ? 'active' :'' " @click="bigImg(index)">
+                        <img  :src="item.image" alt="Svezia" />
                     </div>
                     
                 </div>
